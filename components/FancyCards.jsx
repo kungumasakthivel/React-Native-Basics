@@ -15,7 +15,13 @@ export default function FancyCards() {
                 }}
                 style={styles.image}
             />
-            <View style={styles.cardBody}></View>
+            <View style={styles.cardBody}>
+                <Text style={styles.title}>React Native</Text>
+                <Text style={styles.description}>
+                    Single code base which supports cross platform
+                    capabilities to run on both android and ios.
+                </Text>
+            </View>
         </View>
       </View>
     </View>
@@ -33,10 +39,29 @@ const styles = StyleSheet.create({
     },
     image: {
         height: 220,
+        borderRadius: 8,
+        borderBottomRightRadius: 0,
+        borderBottomLeftRadius: 0,
+    },
+    card: {
+        height: 420,
+        backgroundColor: '#fff',
         margin: 20,
         borderRadius: 8,
+        elevation: 5,
     },
-    card: {},
     cardElevated: {},
-    cardBody: {},
+    cardBody: {
+        // flex: 1,
+        // flexGrow: 1,
+        paddingHorizontal: 12,
+    },
+    title: {
+        color: '#000',
+        fontSize: 22,
+    },
+    description: {
+        color: '#000',
+        fontSize: 16,
+    },
 });
